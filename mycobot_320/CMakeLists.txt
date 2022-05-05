@@ -11,19 +11,19 @@ find_package(catkin REQUIRED COMPONENTS
   image_transport
   cv_bridge
 
-  mycobot_communication
-  mycobot_description
-  mycobot_320
+##  mycobot_communication
+##  mycobot_description
+##  mycobot_320
 )
 
 ## Declare a catkin package
 catkin_package(
   CATKIN_DEPENDS std_msgs actionlib
 
-  INCLUDE_DIRS include
-  LIBRARIES mycobot_320
-  CATKIN_DEPENDS mycobot_communication mycobot_description
-  DEPENDS system_lib
+##  INCLUDE_DIRS include
+##  LIBRARIES mycobot_320
+##  CATKIN_DEPENDS mycobot_communication mycobot_description
+##  DEPENDS system_lib
 )
 
 ## Build talker and listener
