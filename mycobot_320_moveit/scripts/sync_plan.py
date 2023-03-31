@@ -26,7 +26,7 @@ def listener():
     rospy.init_node("mycobot_reciver", anonymous=True)
     port = subprocess.check_output(['echo -n /dev/ttyUSB*'], 
                                     shell=True)
-
+    port = "/dev/usb-mycobot"
     port = rospy.get_param("~port", port)
     baud = rospy.get_param("~baud", 115200)
     # 1000000

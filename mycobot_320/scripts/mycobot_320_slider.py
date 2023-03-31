@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-
+# coding=utf-8
 """[summary]
 This file obtains the joint angle of the manipulator in ROS,
 and then sends it directly to the real manipulator using `pymycobot` API.
@@ -11,7 +11,6 @@ Passable parameters:
 
 import rospy
 from sensor_msgs.msg import JointState
-
 from pymycobot.mycobot import MyCobot
 
 
@@ -26,7 +25,6 @@ def callback(data):
         data_list.append(value)
 
     mc.send_radians(data_list, 80)#mycobotに角度を送る（pymycobotで設定した関数）
-    # time.sleep(0.5)
 
 
 def listener():
